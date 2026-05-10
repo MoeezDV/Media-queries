@@ -1,0 +1,227 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 20px;
+    transition: 0.4s ease;
+}
+
+/* MAIN CARD */
+.container {
+    width: 100%;
+    max-width: 900px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 25px;
+
+    padding: 50px 40px;
+
+    text-align: center;
+
+    color: white;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* HEADING */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* PARAGRAPH */
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    opacity: 0.95;
+    margin-bottom: 40px;
+}
+
+/* BOX CONTAINER */
+.screen-boxes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+/* EACH BOX */
+.box {
+    flex: 1;
+    min-width: 200px;
+
+    padding: 30px 20px;
+
+    border-radius: 18px;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-8px) scale(1.03);
+}
+
+/* COLORS */
+.mobile {
+    background: #ff6b6b;
+}
+
+.tablet {
+    background: #4ecdc4;
+}
+
+.desktop {
+    background: #1a73e8;
+}
+
+/* BUTTON */
+button {
+    border: none;
+    outline: none;
+
+    padding: 15px 35px;
+
+    border-radius: 50px;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    background: white;
+    color: #333;
+
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: black;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* ========================= */
+/* TABLET RESPONSIVE DESIGN  */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        background: linear-gradient(135deg, #43cea2, #185a9d);
+    }
+
+    .card {
+        padding: 40px 25px;
+    }
+
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .box {
+        font-size: 1rem;
+    }
+}
+
+/* ========================= */
+/* MOBILE RESPONSIVE DESIGN  */
+/* ========================= */
+
+@media (max-width: 480px) {
+
+    body {
+        background: linear-gradient(135deg, #ff9966, #ff5e62);
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .screen-boxes {
+        flex-direction: column;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* ========================= */
+/* LARGE DESKTOPS            */
+/* ========================= */
+
+@media (min-width: 1200px) {
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+}
+
+/* ========================= */
+/* PRINT STYLES              */
+/* ========================= */
+
+@media print {
+
+    body {
+        background: white;
+    }
+
+    .card {
+        background: white;
+        color: black;
+        box-shadow: none;
+        border: 1px solid black;
+    }
+
+    .box {
+        background: lightgray;
+        color: black;
+    }
+
+    button {
+        display: none;
+    }
+}
